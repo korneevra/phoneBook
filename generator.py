@@ -3,6 +3,13 @@ import random
 from random import randint
 
 
+def csvCreate(f_name, lst):
+    data = open(f_name, 'w')
+    for i in lst:
+        data.write(i + '\n')
+    data.close()
+
+
 def listGen(n):
     lst = []
     for i in range(n):
@@ -14,14 +21,14 @@ def listGen(n):
 def nameGen():
     letters = string.ascii_lowercase
     uplet = string.ascii_uppercase
-    return random.choice(uplet) + ''.join(random.choice(letters) for i in range(randint(1, 10)))
+    return random.choice(uplet) + ''.join(random.choice(letters) for i in range(randint(7, 10)))
 
 
 def commentGen(words):
     letters = string.ascii_lowercase
     comment = nameGen()
     for i in range(1, words):
-        comment += ' ' + ''.join(random.choice(letters) for i in range(randint(1, 15)))
+        comment += ' ' + ''.join(random.choice(letters) for i in range(randint(3, 15)))
     return comment
 
 
