@@ -3,8 +3,8 @@ import export as exp
 import import_f as imp
 import ui
 
-pb = 'temp.csv'
-gen.csvCreate(pb, gen.listGen(20))
+pb = 'temp.csv'  # файл хранения справочника
+gen.csvCreate(pb, gen.listGen(20))   # генерируем справочник - случайный набор абонентов
 ui.file_print(pb)
 while True:
     i = ui.todo()
@@ -32,6 +32,8 @@ while True:
             continue
     elif i == '3':
         ui.file_print(pb)
+    elif i == '4':
+        ui.add_subs(pb)
     else:
         ui.error()
         continue

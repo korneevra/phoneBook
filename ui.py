@@ -1,7 +1,8 @@
 
 
 def todo():
-    return input('Choose action: \n (1) - import from file \n (2) - export to file \n (3) - print phone book \n :> ')
+    return input('Choose action: \n (1) - import from file \n (2) - export to file \n '
+                 '(3) - print phone book \n (4) - Add new subscriber \n:> ')
 
 
 def imp_file():
@@ -33,5 +34,12 @@ def file_print(file):
         for i in data:
             t = i.replace(';', '\t\t').replace('\n', '')
             print(t)
+
+
+def add_subs(pb):
+    with open(pb, 'a') as data:
+        data.write(input('Enter Surname, Name, Phone, Comment (through ";"): ') + '\n')
+
+
 
 

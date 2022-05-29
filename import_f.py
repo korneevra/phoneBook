@@ -2,7 +2,7 @@
 
 def importF1(file, pb):
     data = open(file, 'r')
-    temp = open(pb, 'w')
+    temp = open(pb, 'a')
     for i in data:
         if i != '\n':
             ss = i.replace('\n', ';')
@@ -15,7 +15,7 @@ def importF1(file, pb):
 
 def importF2(file, pb):
     data = open(file, 'r')
-    temp = open(pb, 'w')
+    temp = open(pb, 'a')
     for i in data:
         ss = i.replace(',', ';')
         temp.write(ss)
@@ -25,7 +25,7 @@ def importF2(file, pb):
 
 def importCSV(file, pb):
     data = open(file, 'r')
-    temp = open(pb, 'w')
+    temp = open(pb, 'a')
     for i in data:
         temp.write(i)
     data.close()
