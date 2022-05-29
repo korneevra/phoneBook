@@ -39,10 +39,3 @@ while True:
     if ui.exit_cont() == 'e':
         break
 
-# exp.export_f1('format1')
-# exp.export_f2('format2')
-# imp.importF1('format1.txt')
-# imp.importF2('format2.txt')
-# imp.importCSV('pb.csv')
-
-
