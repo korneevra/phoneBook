@@ -4,7 +4,7 @@ import import_f as imp
 import ui
 
 pb = 'temp.csv'  # файл хранения справочника
-gen.csvCreate(pb, gen.listGen(20))   # генерируем справочник - случайный набор абонентов
+gen.csvCreate(pb, gen.listGen(5))   # генерируем справочник - случайный набор 5 абонентов
 ui.file_print(pb)
 while True:
     i = ui.todo()
